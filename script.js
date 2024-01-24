@@ -1,21 +1,43 @@
-function  getComputerChoice() {
+function getComputerChoice() {
     let choices = ['Rock', 'Paper', 'Scissors'];
-    return choices [Math.floor (math.random() * choices.length)];
-    console.log(choices)
+    return choices[Math.floor(Math.random() * choices.length)];
+}
 
-}
-function playRound(playerSelection, computerSelection){
-    playerSelection = playerSelection.tolowerCase();
-    let winningCondition = {'rock': 'scissors', 'paper':'rock', 'scissors': 'Paper' }
-    if (playerSelection === computerSelection.tolowerCase()){
+function playRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerSelection.toLowerCase();
+
+    let winningConditions = { 'rock': 'scissors', 'paper': 'rock', 'scissors': 'paper' };
+
+    if (playerSelection === computerSelection) {
         return "It's a tie! Replay the round.";
+    } else if (winningConditions[playerSelection] === computerSelection) {
+        return 'You win! ' + playerSelection + ' beats ' + computerSelection + '.';
+    } else {
+        return 'You lose! ' + computerSelection + ' beats ' + playerSelection + '.';
     }
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-// let result = (winningConditions[playerSelection] === computerSelection.tolowerCase())
-// 
-function game(){
-    
 }
+
+function updateResultDisplay(result) {
+    const resultDisplay = document.getElementById('resultDisplay');
+    resultDisplay.textContent = result;
 }
+
+function game(playerSelection) {
+    const computerSelection = getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
+    updateResultDisplay(result);
+}
+
+document.getElementById('rockButton').addEventListener('click', function () {
+    game('rock');
+});
+
+document.getElementById('paperButton').addEventListener('click', function () {
+    game('paper');
+});
+
+document.getElementById('scissorsButton').addEventListener('click', function () {
+    game('scissors');
+});
+
