@@ -1,32 +1,7 @@
 
-/* body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #ff7e5f, #feb47b, #fff8e5);
-}
-
-button {
-        padding: 10px 20px;
-        font-size: 16px;
-        margin: 5px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        background: linear-gradient(to right, #64b3f4, #c2e59c);
-        color: white;
-}
-
-#resultDisplay {
-            margin-top: 20px;
-            font-size: 24px;
-            font-weight: bold;
-} */
+/* First Solid Color Style */
 body {
-    background: linear-gradient(to right, #f3f3f3, #e1e1e1);
+    background-color: #f0f0f0;
     margin: 0;
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -42,14 +17,13 @@ button {
     cursor: pointer;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: linear-gradient(to right, #b0c4de, #d3d3d3);
-    color: #333;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #3498db;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 button:hover {
-    background: linear-gradient(to right, #778899, #a9a9a9);
-    color: #fff;
+    background-color: #2980b9;
 }
 
 #resultDisplay {
@@ -58,3 +32,41 @@ button:hover {
     font-weight: bold;
     color: #333;
 }
+
+/* Style with Icons  */
+/* body {
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#resultDisplay {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.icon {
+    margin-right: 8px;
+} */
